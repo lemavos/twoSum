@@ -1,18 +1,5 @@
-public class Main {
-    public static void main(String[] args) {
-        Solution s = new Solution();
-        int[] nums = {1, 3, 6, 7, 9};
-        int target = 9;
-
-        int[] result = s.twoSum(nums, target);
-
-        if (result != null) {
-            System.out.println("Indexes found: " + result[0] + ", " + result[1]);
-        } else {
-            System.err.println("No combination found!");
-        }
-    }
-}
+import java.util.Scanner;
+import java.util.Arrays;
 
 class Solution {
     public int[] twoSum(int[] nums, int target) {
@@ -24,5 +11,33 @@ class Solution {
             }
         }
         return null;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        Solution s = new Solution();
+
+        System.out.println("Enter numbers separated by spaces:");
+        String[] input = scanner.nextLine().split(" ");
+        int[] nums = new int[input.length];
+
+        for (int i = 0; i < input.length; i++) {
+            nums[i] = Integer.parseInt(input[i]);
+        }
+
+        System.out.print("Enter target value: ");
+        int target = scanner.nextInt();
+
+        int[] result = s.twoSum(nums, target);
+
+        if (result != null) {
+            System.out.println("Indexes found: " + result[0] + ", " + result[1]);
+        } else {
+            System.err.println("No combination found!");
+        }
+
+        scanner.close();
     }
 }
