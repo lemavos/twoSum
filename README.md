@@ -43,7 +43,7 @@ Indexes found: 1, 2
 
 ## 🔗 Online Submission
 
-- [My solution on LeetCode](https://leetcode.com/problems/two-sum/submissions/1651126541)
+- [My solution on LeetCode](https://leetcode.com/problems/two-sum/submissions/1651126541/)
 
 ## 📂 Project Structure
 
